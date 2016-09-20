@@ -29,7 +29,13 @@ Windows, MacOS or Linux for desktop app modern browser for Web app.
 2. Unarchive
 3. Launch `panogram.exe` for Windows, `panogram.app` for Mac OS, `panogram` for Linux.
 
-OR
+OR (Docker)
+
+1. `docker build -t panogram .`
+2. `docker run -ti -p 8000:80 panogram`
+3. Navigate to `http://localhost:8000/` in your browser
+
+OR (hosted)
 
 [Web App](http://panogram.github.io/panogram)
 
