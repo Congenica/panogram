@@ -32768,8 +32768,10 @@ var cleanGender = function cleanGender(val) {
 };
 
 // clean the data just to be extra sure
-var cleanData = function cleanData(data) {
-  return JSON.parse(data).map(function (datum) {
+var cleanData = function cleanData() {
+  var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+
+  return data.map(function (datum) {
     var hpoTerms = datum.hpoTerms,
         mother = datum.mother,
         father = datum.father,

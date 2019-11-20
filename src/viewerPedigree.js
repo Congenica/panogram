@@ -38,8 +38,8 @@ const cleanGender = val => {
 };
 
 // clean the data just to be extra sure
-const cleanData = data => {
-  return JSON.parse(data).map(datum => {
+const cleanData = (data = [] ) => {
+  return data.map(datum => {
     const {
             hpoTerms,
             mother,
