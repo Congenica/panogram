@@ -34,4 +34,6 @@ jobs:
               exit 0;
             fi
 
+            echo "run npm build and commit the main.bundle.js";
+            git diff;
             exit 1;
