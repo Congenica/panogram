@@ -1,4 +1,4 @@
-import XRegExp from 'xregexp'
+import XRegExp from 'xregexp';
 
 /*
  * HPOTerm is a class for storing phenotype information and loading it from the
@@ -82,7 +82,7 @@ HPOTerm.sanitizeID = function(id) {
   temp = temp.replace(/\,/g, '__COMMA__');
   // XRegExp handles unicode characters for us, so languages like chinese don't
   // get filtered out here.
-  return temp.replace(XRegExp('[^\\pL\\p{Dash_Punctuation}*,;_\\-*]', 'g'),  '__');
+  return temp.replace(XRegExp('[^\\p{L}\\p{N}\\p{Dash_Punctuation}*,;_\\-*]', 'g'),  '__');
 };
 
 HPOTerm.desanitizeID = function(id) {
