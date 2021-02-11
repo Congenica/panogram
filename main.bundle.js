@@ -16775,6 +16775,7 @@ HPOTerm.sanitizeID = function (id) {
   temp = temp.replace(/\,/g, '__COMMA__');
   // XRegExp handles unicode characters for us, so languages like chinese don't
   // get filtered out here.
+  // We explicitly allow numbers in the legends due to bug SAP-19842
   return temp.replace((0, _xregexp2.default)('[^\\p{L}\\p{N}\\p{Dash_Punctuation}*,;_\\-*]', 'g'), '__');
 };
 
