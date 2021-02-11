@@ -31,7 +31,6 @@ export const Controller = Class.create({
 
   handleUndo: function(event)
     {
-    console.log("handleUndo");
     console.log('event: ' + event.eventName + ', memo: ' + stringifyObject(event.memo));
     editor.getActionStack().undo();
   },

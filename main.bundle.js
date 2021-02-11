@@ -35352,7 +35352,6 @@ var Controller = exports.Controller = Class.create({
   },
 
   handleUndo: function handleUndo(event) {
-    console.log("handleUndo");
     console.log('event: ' + event.eventName + ', memo: ' + (0, _helpers.stringifyObject)(event.memo));
     editor.getActionStack().undo();
   },
