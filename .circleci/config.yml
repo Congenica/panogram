@@ -15,7 +15,6 @@ jobs:
           command: |
             sudo chown -R 3434:3434 "/home/circleci/.npm"
             sudo chown -R 3434:3434 "/home/circleci/.config"
-            sudo chown -R 3434:3434 "/home/circleci/.cache"
             npm ci
             bower install
       - save_cache:
