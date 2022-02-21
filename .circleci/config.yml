@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install Bower
           command: sudo npm install -g bower
@@ -16,7 +16,7 @@ jobs:
             npm ci
             bower install
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: v1-dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - run:
