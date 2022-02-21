@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:carbon
+      - image: cimg/node:8.17
     steps:
       - checkout
       - restore_cache:
