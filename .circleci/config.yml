@@ -2,21 +2,23 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:carbon
+      - image: cimg/node:8.17
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install Bower
           command: sudo npm install -g bower
       - run:
           name: Install dependencies
           command: |
+            sudo chown -R 3434:3434 "/home/circleci/.npm"
+            sudo chown -R 3434:3434 "/home/circleci/.config"
             npm ci
             bower install
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: v1-dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - run:
