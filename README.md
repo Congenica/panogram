@@ -4,17 +4,21 @@ To see the original README see [here](./panogram-README.md).
 
 The instructions here are for developing and building panogram.
 
-## Developing with webpack
-
-do this:
+## Setup
+With [nvm](https://github.com/nvm-sh/nvm) tool installed, run
 ```
-npm ci # Needs npm >= 5.7.1
-bower install
-npm run dev
+nvm use
+npm ci
+npx bower install
 ```
-head to localhost:8080
+for using a node version that is expected by the repo,
+installing node & bower dependencies.
 
-### Building:
+### Running
+Currently the backend is not configured for it properly, it diverged some time ago.
+Best bet is to actually use it integrated where backend will be available.
+
+### Building
 
 Before committing any changes you must run a build.
 
