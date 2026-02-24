@@ -40,7 +40,6 @@
   },
   "dependencies": {
     "jquery": "3.7.1",
-    "jquery-migrate": "3.6.0",
     "lodash": "^4.17.4",
     "prototype": "github:Congenica/prototype.node.js",
     "ramda": "^0.23.0",

@@ -4,7 +4,7 @@ const CircularDependencyPlugin = require("circular-dependency-plugin");
 
 module.exports = {
     entry: {
-        main: ["jquery", "jquery-migrate/dist/jquery-migrate.js", "./main.js"],
+        main: "./main.js",
     },
     output: {
         // path: path.resolve(__dirname, './dist'),
