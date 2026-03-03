@@ -39,7 +39,7 @@
     "precommit": "npm run precise-commits"
   },
   "dependencies": {
-    "jquery": "^3.1.1",
+    "jquery": "3.7.1",
     "lodash": "^4.17.4",
     "prototype": "github:Congenica/prototype.node.js",
     "ramda": "^0.23.0",
